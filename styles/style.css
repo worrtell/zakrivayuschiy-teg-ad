@@ -1,16 +1,311 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  margin: 0;
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-variation-settings: 'wght' var(--text-weight);
+  background-color: var(--bg-color);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  inline-size: var(--header-width);
+  margin: 100px auto;
+  border: 2px solid var(--accent-color);
+  padding: clamp(7.5rem, 7.065rem + 1.859vw, 8.75rem) 0;
+  background-color: var(--bg-color);
+  font-family: var(--accent-font);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header__logo {
+  margin-block-end: 20px;
+  font-size: var(--header-logo-size);
+}
+
+.header__title {
+  font-size: var(--header-title-size);
+  font-weight: 400;
+}
+
+.content {
+  inline-size: var(--content-width);
+  margin: 0 auto;
+}
+
+.cards-list {
+  display: grid;
+  gap: var(--card-gap);
+}
+
+.card {
+  border: 2px solid var(--accent-color);
+  background-color: var(--bg-color);
+}
+
+.card__title {
+  padding: 6px 10px;
+  font-size: 18px;
+  line-height: 1.2;
+  font-variation-settings: 'wght' var(--title-weight);
+}
+
+.card__image-container {
+  position: relative;
+  border-block: 2px solid var(--accent-color);
+}
+
+.card__image {
+  display: block;
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__label {
+  position: absolute;
+  top: 25px;
+  right: 13px;
+  z-index: 1;
+  opacity: 0.5;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  text-shadow:
+    -1px 0 var(--stroke-color),
+    0 1px var(--stroke-color),
+    1px 0 var(--stroke-color),
+    0 -1px var(--stroke-color);
+  mix-blend-mode: hard-light;
+}
+
+@supports ((-webkit-text-stroke: 1px var(--stroke-color)) or (text-stroke: 1px var(--stroke-color))) {
+  .card__label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--stroke-color);
+    text-stroke: 1px var(--stroke-color);
+  }
+}
+
+.card__content {
+  display: grid;
+  gap: 27px;
+  padding: 25px;
+}
+
+.card__text {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  padding: 0 25px 25px;
+}
+
+.button {
+  position: relative;
+  border: 2px solid var(--accent-color);
+  overflow: hidden;
+  background-color: var(--bg-color);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: var(--accent-color);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.button:hover::before {
+  transform: translateX(0);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  color: var(--button-text-color);
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 0.9;
+  mix-blend-mode: difference;
+}
+
+.card__icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-inline-size: 39px;
+  min-block-size: 38px;
+  border: 2px solid transparent;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.card__like-button {
+  min-inline-size: 130px;
+  min-block-size: 38px;
+  padding: 0;
+}
+
+.save-button-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0 100px;
+}
+
+.save-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 20px;
+}
+
+.save-button__icon {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
+}
+
+.dialog {
+  inline-size: min(353px, calc(100% - 32px));
+  border: 2px solid var(--accent-color);
+  padding: 0;
+  background-color: var(--bg-color);
+}
+
+.dialog[open] {
+  display: grid;
+  gap: 30px;
+  padding: 30px;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.dialog__content {
+  display: grid;
+  grid-template-columns: 39px 1fr;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.dialog__icon {
+  inline-size: 39px;
+  block-size: 39px;
+  flex-shrink: 0;
+}
+
+.dialog__text {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.dialog__form {
+  display: block;
+}
+
+.dialog__button {
+  inline-size: 100%;
+  min-block-size: 38px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.card__image-filter-1 {
+  filter: sepia(0.7);
+}
+
+.card__image-filter-2 {
+  filter: grayscale(0.8);
+}
+
+.card__image-filter-3 {
+  filter: saturate(180%);
+}
+
+.card__image-filter-4 {
+  filter: hue-rotate(30deg);
+}
+
+.card__image-filter-5 {
+  filter: contrast(140%);
+}
+
+.card__image-filter-6 {
+  filter: blur(1px);
+}
+
+.card__image-filter-7 {
+  filter: brightness(1.2);
+}
+
+.card__image-filter-8 {
+  filter: contrast(120%) saturate(150%) brightness(1.1);
+}
+
+@media (width <= 375px) {
+  .header {
+    inline-size: 100%;
+    margin: 100px 0;
+  }
+
+  .content {
+    inline-size: 100%;
+  }
+
+  .card__label {
+    right: 11px;
+  }
+
+  .save-button {
+    flex-direction: column;
+  }
+
+  .save-button__icon {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+
+  .dialog {
+    inline-size: calc(100% - 34px);
+  }
 }

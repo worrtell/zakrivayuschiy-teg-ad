@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
     <title>Закрывающий тег</title>
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -11,8 +15,420 @@
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
   <body class="page">
-    <header class="header"></header>
-    <main></main>
+    <header class="header">
+      <div class="header__logo" aria-hidden="true">&lt;/HTML&gt;</div>
+      <h1 class="header__title">закрывающий тег</h1>
+    </header>
+
+    <main class="content">
+      <ul class="cards-list">
+        <li>
+          <article class="card">
+            <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+
+            <div class="card__image-container">
+              <span class="card__label">Начало</span>
+              <img
+                class="card__image card__image-filter-1"
+                src="./images/image-1.png"
+                alt="Фургончик с едой на фоне ночного неба"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card__content">
+              <p class="card__text">
+                Это было самое начало пути. На этом этапе важно было проникнуться
+                основами и настроиться на учёбу. И, возможно, подумать, как новые
+                знания могут повлиять на ваше будущее.
+              </p>
+              <p class="card__text">
+                Место для ваших воспоминаний о начале обучения.
+              </p>
+            </div>
+
+            <div class="card__footer">
+              <button class="card__icon-button" type="button" aria-label="Лайк">
+                <svg
+                  class="like-icon"
+                  width="39"
+                  height="36"
+                  viewBox="0 0 39 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <!-- Структура SVG будет добавлена позже -->
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="card">
+            <h2 class="card__title">1 спринт: А если не получится?</h2>
+
+            <div class="card__image-container">
+              <span class="card__label">Страх</span>
+              <img
+                class="card__image card__image-filter-2"
+                src="./images/image-2.png"
+                alt="Иллюстрация второй карточки"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card__content">
+              <p class="card__text">
+                Первые испытания приносят сомнения. Что если я не справлюсь?
+                Что если всё это зря?
+              </p>
+              <p class="card__text">
+                Место для ваших воспоминаний о первых трудностях.
+              </p>
+            </div>
+
+            <div class="card__footer">
+              <button class="card__icon-button" type="button" aria-label="Лайк">
+                <svg
+                  class="like-icon"
+                  width="39"
+                  height="36"
+                  viewBox="0 0 39 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <!-- Структура SVG -->
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="card">
+            <h2 class="card__title">1 спринт: Первые результаты</h2>
+
+            <div class="card__image-container">
+              <span class="card__label">Надежда</span>
+              <img
+                class="card__image card__image-filter-3"
+                src="./images/image-3.png"
+                alt="Иллюстрация третьей карточки"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card__content">
+              <p class="card__text">
+                На третьей неделе всё начало получаться. Первые строки кода,
+                которые работают!
+              </p>
+              <p class="card__text">
+                Место для ваших воспоминаний о первых победах.
+              </p>
+            </div>
+
+            <div class="card__footer">
+              <button class="card__icon-button" type="button" aria-label="Лайк">
+                <svg
+                  class="like-icon"
+                  width="39"
+                  height="36"
+                  viewBox="0 0 39 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <!-- Структура SVG -->
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="card">
+            <h2 class="card__title">2 спринт: Погружение</h2>
+
+            <div class="card__image-container">
+              <span class="card__label">Фокус</span>
+              <img
+                class="card__image card__image-filter-4"
+                src="./images/image-4.png"
+                alt="Иллюстрация четвёртой карточки"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card__content">
+              <p class="card__text">
+                Погружение в материал становится всё глубже. Уже не просто повторяю
+                за тренером, а начинаю понимать логику.
+              </p>
+              <p class="card__text">
+                Место для ваших воспоминаний о погружении в тему.
+              </p>
+            </div>
+
+            <div class="card__footer">
+              <button class="card__icon-button" type="button" aria-label="Лайк">
+                <svg
+                  class="like-icon"
+                  width="39"
+                  height="36"
+                  viewBox="0 0 39 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <!-- Структура SVG -->
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="card">
+            <h2 class="card__title">2 спринт: Сложности</h2>
+
+            <div class="card__image-container">
+              <span class="card__label">Упорство</span>
+              <img
+                class="card__image card__image-filter-5"
+                src="./images/image-5.png"
+                alt="Иллюстрация пятой карточки"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card__content">
+              <p class="card__text">
+                Некоторые темы даются особенно тяжело. Приходится возвращаться
+                к материалу снова и снова.
+              </p>
+              <p class="card__text">
+                Место для ваших воспоминаний о трудных моментах.
+              </p>
+            </div>
+
+            <div class="card__footer">
+              <button class="card__icon-button" type="button" aria-label="Лайк">
+                <svg
+                  class="like-icon"
+                  width="39"
+                  height="36"
+                  viewBox="0 0 39 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <!-- Структура SVG -->
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="card">
+            <h2 class="card__title">3 спринт: Прорыв</h2>
+
+            <div class="card__image-container">
+              <span class="card__label">Озарение</span>
+              <img
+                class="card__image card__image-filter-6"
+                src="./images/image-6.png"
+                alt="Иллюстрация шестой карточки"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card__content">
+              <p class="card__text">
+                Вдруг всё становится понятно. Как будто пазл сложился. Теперь
+                я вижу всю картину целиком!
+              </p>
+              <p class="card__text">
+                Место для ваших воспоминаний о моменте озарения.
+              </p>
+            </div>
+
+            <div class="card__footer">
+              <button class="card__icon-button" type="button" aria-label="Лайк">
+                <svg
+                  class="like-icon"
+                  width="39"
+                  height="36"
+                  viewBox="0 0 39 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <!-- Структура SVG -->
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="card">
+            <h2 class="card__title">3 спринт: Практика</h2>
+
+            <div class="card__image-container">
+              <span class="card__label">Уверенность</span>
+              <img
+                class="card__image card__image-filter-7"
+                src="./images/image-7.png"
+                alt="Иллюстрация седьмой карточки"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card__content">
+              <p class="card__text">
+                Применяю знания на практике. Создаю свои первые проекты.
+                Чувствую себя увереннее.
+              </p>
+              <p class="card__text">
+                Место для ваших воспоминаний о применении знаний.
+              </p>
+            </div>
+
+            <div class="card__footer">
+              <button class="card__icon-button" type="button" aria-label="Лайк">
+                <svg
+                  class="like-icon"
+                  width="39"
+                  height="36"
+                  viewBox="0 0 39 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <!-- Структура SVG -->
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="card">
+            <h2 class="card__title">&lt;/html&gt;</h2>
+
+            <div class="card__image-container">
+              <span class="card__label">Гордость</span>
+              <img
+                class="card__image card__image-filter-8"
+                src="./images/image-9.png"
+                alt="Иллюстрация восьмой карточки"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card__content">
+              <p class="card__text">
+                Вот и финал. Сложно поверить, но я прошёл этот путь.
+                Теперь я могу создавать что-то своё!
+              </p>
+              <p class="card__text">
+                Место для ваших воспоминаний о завершении курса.
+              </p>
+            </div>
+
+            <div class="card__footer">
+              <button class="card__icon-button" type="button" aria-label="Лайк">
+                <svg
+                  class="like-icon"
+                  width="39"
+                  height="36"
+                  viewBox="0 0 39 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <!-- Структура SVG -->
+                </svg>
+              </button>
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </article>
+        </li>
+      </ul>
+
+      <div class="save-button-container">
+        <button
+          class="save-button button"
+          type="button"
+          aria-controls="dialog"
+          onclick="document.getElementById('dialog').showModal()"
+        >
+          <svg
+            class="save-button__icon"
+            width="21"
+            height="21"
+            viewBox="0 0 21 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <use href="./images/floppy.svg#floppy-icon" />
+          </svg>
+          <span class="button__text">Сохранить на память</span>
+        </button>
+      </div>
+    </main>
+
+    <dialog class="dialog" id="dialog">
+      <div class="dialog__content">
+        <svg
+          class="dialog__icon"
+          width="39"
+          height="39"
+          viewBox="0 0 21 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <use href="./images/floppy.svg#floppy-icon" />
+        </svg>
+        <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+      </div>
+      <form class="dialog__form" method="dialog">
+        <button class="dialog__button button" type="submit">
+          <span class="button__text">ОК</span>
+        </button>
+      </form>
+    </dialog>
+
     <script src="./scripts/like.js"></script>
   </body>
 </html>
